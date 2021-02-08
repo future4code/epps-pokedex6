@@ -10,3 +10,7 @@ export const goToHome = (history) => {
 export const goToDetails = (history) => {
     history.push("/details")
 }
+
+export const goToBack = (history) => {
+    history.goBack()
+}
