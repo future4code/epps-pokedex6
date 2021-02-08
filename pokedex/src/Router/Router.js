@@ -2,8 +2,8 @@ import { BrowserRouter, Switch, Route} from "react-router-dom"
 import HeaderHome from '../Components/HeaderHome'
 import HeaderDetails from '../Components/HeaderDetails'
 import HeaderPokedex from '../Components/HeaderPokedex'
-import Home from '../Pages/Home'
-import Pokedex from '../Pages/Pokedex'
+import Home from '../Pages/Home/Home'
+import Pokedex from '../Pages/Pokedex/Pokedex'
 import Details from '../Pages/Details'
 
 const Router = () => {

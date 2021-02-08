@@ -13,18 +13,6 @@ function Pokedex() {
       <Cards/>
       <Cards/>
       <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
          
     </PokedexContainer>
   );
