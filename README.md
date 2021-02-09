@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Artur Nicolaiewsky Pellicioli
+- Raíza Leal França
+- Wilson da Silva Ferreira Júnior
 
 Link do Surge: www.link.com.br
 
