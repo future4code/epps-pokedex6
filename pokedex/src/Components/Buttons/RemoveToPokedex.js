@@ -4,7 +4,7 @@ import { Button } from './styled'
 
 function RemoveToPokedex() {
   return (
-    <Button>Remove</Button>
+    <Button>Remover</Button>
   )
 }
 
