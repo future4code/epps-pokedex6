@@ -5,26 +5,26 @@ import { HomeContainer } from '../Home/styled'
 function Home() {
   return (
     <HomeContainer>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
 
     </HomeContainer>
   );

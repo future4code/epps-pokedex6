@@ -1,6 +1,7 @@
 import React from 'react';
 import Cards from '../../Components/Card/Card';
-import {PokedexContainer }from '../Pokedex/styled'
+import { PokedexContainer } from '../Pokedex/styled';
+
 
 function Pokedex() {
   return (
@@ -10,10 +11,7 @@ function Pokedex() {
       <Cards/>
       <Cards/>
       <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-         
+     
     </PokedexContainer>
   );
 }
