@@ -20,7 +20,6 @@ function Cards() {
         <RemoveToPokedex />
         <Button onClick={() => goToDetails(history)}>Ver Detalhes</Button>
       </ButtonContainer>
-
     </ContainerCard>
 
   );

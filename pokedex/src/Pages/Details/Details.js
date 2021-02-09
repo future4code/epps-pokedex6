@@ -1,10 +1,29 @@
 import React from 'react';
-import MainPowerList from '../../Components/MainPowerList';
-import PowerList from '../../Components/PowerList';
+import MainPowerList from '../../Components/Lists/MainPowerList';
+import PowerList from '../../Components/Lists/PowerList';
 import  {Box, Container, LeftCard, MiddleCard, RightTopCard, RightCard} from './styled'
 
 
 function Details() {
+
+  // const [pokemon, setPokemon] = useState ({});
+  
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://pokeapi.co/api/v2/pokemon/${props.pokemon}`
+  //     )
+  //     .then(response => {
+  //       setPokemon(response.data);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }, [props.pokemon]);
+
+  // const [pokeList, setPokeList] = useState([]);
+  // const [pokeName, setPokeName] = useState("");
+
   return (
   <Container>
     <Box>

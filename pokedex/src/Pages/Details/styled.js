@@ -12,6 +12,7 @@ export const Container = styled.div`
     flex-direction: column;
     width: 100vw;
     height: auto;
+    margin-bottom: 5%;
     }
 `
 export const Box = styled.div `
@@ -20,6 +21,7 @@ export const Box = styled.div `
     justify-content: center;
     width: 100%;
     text-align: center;
+
 
     @media(max-width: 800px){
     width: 98vw;
@@ -38,7 +40,7 @@ export const LeftCard = styled.div `
     margin: 50px;
     
     @media(max-width: 800px){
-    width: 30%;
+    width: 35%;
     height: 10%;
     margin: 2%;
     }
@@ -49,11 +51,10 @@ export const MiddleCard = styled.div `
     align-self: center;
     background-color: #DDD;
     width: 80%;
-    height: 80%;
-    padding: 5px;
+    height: 75%;
+    padding: 10px;
     
     @media(max-width: 800px){
-    width: 30%;
     height: 40%;
     margin: 2%;
     }
@@ -67,28 +68,19 @@ export const RightTopCard = styled.div `
     background-color: #DDD;
     width: 80%;
     height: 10%;
-    margin-bottom:10px;
-    padding: 5px;
+    margin-bottom:5px;
+    padding: 10px;
 
     @media(max-width: 800px){
-    width: 30%;
-    height: 10%;
     margin: 2%;
     }
 `
-
 export const RightCard = styled.div `
     display: flex;
     align-self: center;
     background-color: #DDD;
     flex-direction: column;
     width: 80%;
-    height: 70%;
-    padding: 5px;
-
-    @media(max-width: 800px){
-    width: 30%;
-    height: 40%;
-    margin: 2%;
-    }
+    height: auto;
+    padding: 10px;
 `
