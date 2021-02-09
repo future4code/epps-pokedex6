@@ -4,9 +4,14 @@ import Home from '../Pages/Home/Home'
 import Pokedex from '../Pages/Pokedex/Pokedex'
 import Details from '../Pages/Details/Details'
 
+
 const Router = (Pokemon) => {
     
     console.log(Pokemon)
+
+
+
+const Router = () => {
 
     return(
     <BrowserRouter>
