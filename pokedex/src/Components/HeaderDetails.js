@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { goToBack } from '../Router/Coordinator'
+import { goToPokedex, goToHome } from '../Router/Coordinator'
 import { useHistory } from 'react-router-dom'
 
 
@@ -46,7 +46,7 @@ function HeaderDetails() {
 
     return (
         <HeaderBox>
-            <Button onClick={() => goToBack(history)}>Voltar</Button>
+            <Button onClick={() => goToPokedex(history)}>PokeDex</Button>
             <Title>Nome do Pokemon</Title>
             <Button>Adicionar / Remover da pokedex</Button>
         </HeaderBox>
