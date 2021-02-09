@@ -2,7 +2,7 @@
 
 Nome dos integrantes: 
 - Artur Nicolaiewsky Pellicioli
-- Pessoa 2
+- Raíza Leal França
 - Wilson da Silva Ferreira Júnior
 
 Link do Surge: www.link.com.br
