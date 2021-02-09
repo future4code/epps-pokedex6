@@ -7,10 +7,6 @@ function Pokedex() {
   return (
     <PokedexContainer>
       <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
-      <Cards/>
      
     </PokedexContainer>
   );
