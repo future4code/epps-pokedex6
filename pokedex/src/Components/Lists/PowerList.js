@@ -14,13 +14,12 @@ const List = styled.ul`
     display: block;
     list-style-type: none;
     margin-top: 1em;
-    margin-bottom: 1 em;
     margin-left: 0;
     margin-right: 0;
     padding-left: 20px;
 `
 const Item = styled.li ` 
-    padding: 20px;
+    padding: 15px;
 `
 
 function PowerList() {

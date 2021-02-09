@@ -17,7 +17,6 @@ function Cards() {
         <Button>Adicionar</Button>
         <Button onClick={() => goToDetails(history)}>Ver Detalhes</Button>
       </ButtonContainer>
-
     </ContainerCard>
    
   );
