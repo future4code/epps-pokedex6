@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { goToBack } from '../Router/Coordinator'
+import { goToHome } from '../Router/Coordinator'
 import { useHistory } from 'react-router-dom'
 
 const HeaderBox = styled.header`
@@ -43,7 +43,7 @@ function HeaderPokedex() {
 
     return (
         <HeaderBox>
-            <Button onClick={() => goToBack(history)}>Voltar</Button>
+            <Button onClick={() => goToHome(history)}>Home</Button>
             <Title>Pokedex</Title>
         </HeaderBox>
     )
