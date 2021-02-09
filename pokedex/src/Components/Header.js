@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import GoToPokedex from './ButtonsArtur/GoToPokedex'
-import GoToHome from './ButtonsArtur/GoToHome'
-import GoBack from './ButtonsArtur/GoBack'
-import AddOrRemove from './ButtonsArtur/AddOrRemove'
+import GoToPokedex from './Buttons/GoToPokedex'
+import GoToHome from './Buttons/GoToHome'
+import GoBack from './Buttons/GoBack'
+import AddOrRemove from './Buttons/AddOrRemove'
 
 const HeaderBox = styled.header`
     background: #d53b47;
+    width: 100vw;
     height: 10vh;
 
     display: flex;
