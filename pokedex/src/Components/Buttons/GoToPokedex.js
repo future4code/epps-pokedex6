@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Button = styled.button`
     color: white;
     position: absolute;
-    left: 5vw;
+    right: 5vw;
     background: none;
     outline: none;
     padding: 1rem;

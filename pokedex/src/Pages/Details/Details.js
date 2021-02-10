@@ -11,6 +11,10 @@ function Details() {
   const { states, setters, requests } = useContext(GlobalStateContext);
 
   useEffect(() => {
+    setters.setPage("details")
+  },[])
+
+  useEffect(() => {
    states.pokeDetails && requests.getPokeDataDetails()
   }, [states.pokeDetails])
 
