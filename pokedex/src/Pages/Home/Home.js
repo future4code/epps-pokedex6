@@ -50,10 +50,14 @@ function Home() {
     <HomeContainer>
       {pokeData && pokeData.map((pokemon) => {
         return(
-          <Cards pokemon={pokemon}/>
+          <Cards 
+          pokemon={pokemon}
+          key={pokemon.name}
+          />
         )})}
     </HomeContainer>
   );
 }
 
 export default Home;
+

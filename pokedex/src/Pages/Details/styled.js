@@ -38,6 +38,8 @@ export const LeftCard = styled.div `
     width: 40%;
     height: 30%;
     margin: 50px;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px #A9A9A9;
     
     @media(max-width: 800px){
     width: 35%;
@@ -53,6 +55,8 @@ export const MiddleCard = styled.div `
     width: 80%;
     height: 75%;
     padding: 10px;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px #A9A9A9;
     
     @media(max-width: 800px){
     height: 40%;
@@ -68,8 +72,10 @@ export const RightTopCard = styled.div `
     background-color: #DDD;
     width: 80%;
     height: 10%;
-    margin-bottom:5px;
-    padding: 10px;
+    margin-bottom:10px;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 10px 6px 5px #A9A9A9;
 
     @media(max-width: 800px){
     margin: 2%;
@@ -83,4 +89,6 @@ export const RightCard = styled.div `
     width: 80%;
     height: auto;
     padding: 10px;
+    border-radius: 10%;
+    box-shadow: 10px 6px 5px #A9A9A9;
 `
