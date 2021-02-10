@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Cards from '../../Components/Card/Card';
 import { PokedexContainer } from '../Pokedex/styled';
-
+import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
 function Pokedex() {
+  const { states, setters, requests } = useContext(GlobalStateContext);
+
+   useEffect(() => {
+    requests.getPokedexData()
+  }, [states.pokedex])
+
+console.log(states.pokedexData)
   return (
     <PokedexContainer>
-      {<Cards/> === null ? <Cards/> : <div>Sem pokemons na pokedex</div>}
+
+      {states.pokedexData && states.pokedexData.map((pokemon) => {
+        {console.log(pokemon)}
+        return(
+          <Cards 
+          pokemon={pokemon}
+          key={pokemon.name}
+          />
+        )})}
+        
+
+      
     </PokedexContainer>
   )
 }

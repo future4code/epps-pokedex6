@@ -10,71 +10,10 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=5";
 
 function Details() {
 
-  // const [pokeList, setPokeList] = useState([]);
-  // const [pokeName, setPokeName] = useState("");
-  // const [pokeUrl, setPokeUrl] = useState([]);
-  // const [pokeId, setPokeId] = useState([]);
-  // const [pokeColor, setPokeColor] = useState([]);
-
-  // const getPokemon = () => { 
-  //   axios
-  //     .get(baseUrl)
-  //     .then(response => {
-  //       setPokeList(response.data.results)
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //     });
-  // };
 
   // useEffect(() => {
   //   getPokemon()
   // }, [])
-
-  // useEffect(() => {
-  //   pokeList.map((pokemon) => {
-  //     axios
-  //         .get(
-  //           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-  //         )
-  //         .then(res => {
-  //             setPokeName(pokemon.name)
-  //             setPokeUrl(pokemon.url)
-  //         })
-  //         .catch(err => {
-  //           console.log(err)
-  //         });
-  //   })
-  // },[pokeList])
-
-  // useEffect(() => {
-  //   pokeList.map((pokemon) => {
-  //     axios
-  //         .get(
-  //           `${pokemon.url}`
-  //         )
-  //         .then(res => {
-  //             setPokeId(res.data.id)
-  //         })
-  //         .catch(err => {
-  //           console.log(err)
-  //         });
-  //   })
-  // },[pokeList])
-
-
-  // useEffect(() => {
-  //     axios
-  //         .get(
-  //           `https://pokeapi.co/api/v2/pokemon-color/${pokeId}`
-  //         )
-  //         .then(res => {
-  //             setPokeColor(res.data.results)
-  //         })
-  //         .catch(err => {
-  //           console.log(err)
-  //         });
-  // },[pokeList])
 
   // console.log(pokeColor)
 
