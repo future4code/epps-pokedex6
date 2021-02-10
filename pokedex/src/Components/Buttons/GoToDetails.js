@@ -1,7 +1,7 @@
 import { goToDetails } from '../../Router/Coordinator'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
-import {useContext} from 'react'
+import React, {useContext} from 'react'
 import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
 const Button = styled.button`
@@ -17,12 +17,13 @@ const GoToDetails = (props) => {
 
         const pokemonToDetails = states.pokeList[index]
         // pokemonToDetails é o que precisamos mandar la pro Details por meio de context
-        console.log(pokemonToDetails)
+        // console.log(pokemonToDetails)
+        setters.setPokeDetails(pokemonToDetails)
     };
 
     const detailsFunction = (pokemon) => {
-        goToDetails(history)
         selectPokemon(pokemon)
+        goToDetails(history)
     }
 
     return (

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import React, {useContext} from 'react'
+import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
 
 const BoxList = styled.div `
@@ -23,16 +25,20 @@ const Item = styled.li `
 `
 
 function PowerList() {
+    
+  const { states, setters, requests } = useContext(GlobalStateContext);
 
+console.log(states.pokeDataDetails)
     return (
         <BoxList>
           <List>
-            <Item>HP: 45</Item>
-            <Item>Attack: 49</Item>
-            <Item>Defense: 49</Item>
-            <Item>Special-attack: 65</Item>
-            <Item>Special-defense: 65</Item>
-            <Item>Speed: 45</Item>
+          {states.pokeDataDetails.stats.map((stats) => {
+              return(
+
+            <Item>{stats.stat.name}: {stats.base_stat}</Item>
+
+              )
+          })}
           </List>
         </BoxList>
     )

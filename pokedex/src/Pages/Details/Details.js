@@ -1,51 +1,62 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState, useContext} from 'react';
 import MainPowerList from '../../Components/Lists/MainPowerList';
 import PowerList from '../../Components/Lists/PowerList';
 import  {Box, Container, LeftCard, MiddleCard, RightTopCard, RightCard} from './styled'
 import Card from '../../Components/Card/Card'
 import axios from 'axios'
-
-const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=5";
-
+import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
 function Details() {
+  
+  const { states, setters, requests } = useContext(GlobalStateContext);
 
+  useEffect(() => {
+   states.pokeDetails && requests.getPokeDataDetails()
+  }, [states.pokeDetails])
 
-  // useEffect(() => {
-  //   getPokemon()
-  // }, [])
+  console.log(states.pokeDataDetails)
 
-  // console.log(pokeColor)
+if(states.pokeDataDetails) {
+      return (
+        <Container>
+        <h1>{states.pokeDataDetails.name}</h1>
+          <Box>
+            <LeftCard>
+              <img src={states.pokeDataDetails.sprites.front_default} alt={states.pokeDataDetails.name}/>              
+            </LeftCard>
+            <LeftCard>
+              <img src={states.pokeDataDetails.sprites.back_default} alt={states.pokeDataDetails.name}/>  
+            </LeftCard>
+          </Box>
+          <Box>
+            <MiddleCard>
+              <h2>Poderes</h2>
+              <PowerList/>
+            </MiddleCard>
+          </Box>
+          <Box>
+            <RightTopCard>
+            {states.pokeDataDetails.types && states.pokeDataDetails.types.map((type) => {
+                return(
+                  <p>{type.type.name}</p>
+                )
+            })}
+            </RightTopCard>
 
-  return (
-  <Container>
-    <Box>
-      <LeftCard>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt='bulbasaur'/>              
-      </LeftCard>
-      <LeftCard>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png" alt='bulbasaur'/>  
-      </LeftCard>
-    </Box>
-    <Box>
-      <MiddleCard>
-        <h2>Poderes</h2>
-        <PowerList/>
-      </MiddleCard>
-    </Box>
-    <Box>
-      <RightTopCard>
-        <p>grass</p>
-        <p>grass</p>
-      </RightTopCard>
-
-      <RightCard>
-        <h2>Principais Poderes</h2>
-        <MainPowerList></MainPowerList>
-      </RightCard>
-    </Box>
-  </Container> 
-  );
+            <RightCard>
+              <h2>Principais Poderes</h2>
+              <MainPowerList/>
+            </RightCard>
+          </Box>
+        </Container> 
+        )
+} else {
+  return(
+// Aqui pode ter um loading personalizado
+  <div>Carregando...</div>
+  )
+}
+  
 }
 
 export default Details;

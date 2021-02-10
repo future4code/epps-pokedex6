@@ -13,6 +13,8 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
   const [pokeColor, setPokeColor] = useState([]);
   const [pokedex, setPokedex] = useState([]);
   const [pokedexData, setPokedexData] = useState();
+  const [pokeDetails, setPokeDetails] = useState();
+  const [pokeDataDetails, setPokeDataDetails] = useState();
 
 const pokeImg = []
 const pokedexImg = []
@@ -76,6 +78,7 @@ const pokedexImg = []
           )
           .then(res => {
               setPokeColor(res.data.results)
+              console.log(res.data.results)
           })
           .catch(err => {
             console.log(err)
@@ -107,7 +110,7 @@ const pokedexImg = []
             )
             .then(res => {
                 pokedexImg.push(res.data)
-                if (pokedexImg.length === 20){
+                if (pokedexImg.length > 0){
                 setPokedexData(pokedexImg)}
             })
             .catch(err => {
@@ -115,10 +118,25 @@ const pokedexImg = []
             });
         })
     }
+    
+// pega detalhes
+  
+    const getPokeDataDetails = () => {
+        axios
+            .get(
+                `https://pokeapi.co/api/v2/pokemon/${pokeDetails.name}`
+            )
+            .then(res => {
+                setPokeDataDetails(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    }
 
-    const states = {pokeList, pokeData, pokeName, pokeUrl, pokeId, pokeColor, pokedex, pokedexData}
-    const setters = {setPokeList, setPokeData, setPokeName, setPokeUrl, setPokeId, setPokeColor, setPokedex, setPokedexData}
-    const requests = {getPokemon, getPokeData, getPokeUrl, getPokeId, getPokeColor, getPokedexData}
+    const states = {pokeList, pokeData, pokeName, pokeUrl, pokeId, pokeColor, pokedex, pokedexData, pokeDetails, pokeDataDetails}
+    const setters = {setPokeList, setPokeData, setPokeName, setPokeUrl, setPokeId, setPokeColor, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails}
+    const requests = {getPokemon, getPokeData, getPokeUrl, getPokeId, getPokeColor, getPokedexData, getPokeDataDetails}
 
     const data = { states, setters, requests };
 
