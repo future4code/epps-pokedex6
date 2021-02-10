@@ -6,10 +6,9 @@ import { PokedexContainer } from '../Pokedex/styled';
 function Pokedex() {
   return (
     <PokedexContainer>
-      <Cards/>
-     
+      {<Cards/> === null ? <Cards/> : <div>Sem pokemons na pokedex</div>}
     </PokedexContainer>
-  );
+  )
 }
 
 export default Pokedex;

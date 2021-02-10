@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Cards from '../../Components/Card/Card';
 import { HomeContainer } from '../Home/styled';
 import axios from 'axios'
+import PokeFullList from '../../Contexts/PokeFullList'
 
 const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
 
@@ -47,12 +48,14 @@ function Home() {
   },[pokeList])
 
   return (
+    <PokeFullList.Provider value={pokeData}>
     <HomeContainer>
       {pokeData && pokeData.map((pokemon) => {
         return(
           <Cards pokemon={pokemon}/>
         )})}
     </HomeContainer>
+    </PokeFullList.Provider>
   );
 }
 
