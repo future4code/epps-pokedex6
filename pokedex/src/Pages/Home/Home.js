@@ -4,12 +4,12 @@ import { HomeContainer } from '../Home/styled';
 import axios from 'axios'
 import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
-
 function Home() {
   const { states, setters, requests } = useContext(GlobalStateContext);
 
   useEffect(() => {
-    requests.getPokemon()
+    requests.getPokemon();
+    setters.setPage("home")
   }, [])
 
    useEffect(() => {

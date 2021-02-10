@@ -6,6 +6,10 @@ import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 function Pokedex() {
   const { states, setters, requests } = useContext(GlobalStateContext);
 
+  useEffect(() => {
+    setters.setPage("pokedex")
+  },[])
+
    useEffect(() => {
     requests.getPokedexData()
   }, [states.pokedex])

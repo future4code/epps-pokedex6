@@ -15,6 +15,7 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
   const [pokedexData, setPokedexData] = useState();
   const [pokeDetails, setPokeDetails] = useState();
   const [pokeDataDetails, setPokeDataDetails] = useState();
+  const [page, setPage] = useState();
 
 const pokeImg = []
 const pokedexImg = []
@@ -110,8 +111,8 @@ const pokedexImg = []
             )
             .then(res => {
                 pokedexImg.push(res.data)
-                if (pokedexImg.length > 0){
-                setPokedexData(pokedexImg)}
+                console.log(res.data, pokedexImg.length)
+                setPokedexData(pokedexImg)
             })
             .catch(err => {
                 console.log(err)
@@ -134,8 +135,8 @@ const pokedexImg = []
             });
     }
 
-    const states = {pokeList, pokeData, pokeName, pokeUrl, pokeId, pokeColor, pokedex, pokedexData, pokeDetails, pokeDataDetails}
-    const setters = {setPokeList, setPokeData, setPokeName, setPokeUrl, setPokeId, setPokeColor, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails}
+    const states = {pokeList, pokeData, pokeName, pokeUrl, pokeId, pokeColor, pokedex, pokedexData, pokeDetails, pokeDataDetails, page}
+    const setters = {setPokeList, setPokeData, setPokeName, setPokeUrl, setPokeId, setPokeColor, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails, setPage}
     const requests = {getPokemon, getPokeData, getPokeUrl, getPokeId, getPokeColor, getPokedexData, getPokeDataDetails}
 
     const data = { states, setters, requests };
