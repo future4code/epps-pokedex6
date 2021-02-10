@@ -21,6 +21,10 @@ const Router = () => {
             <Route exact path="/details">
                 <Details/>
             </Route>
+
+            <Route>
+               <div>error</div>
+            </Route>
         </Switch>
     </BrowserRouter>
     )

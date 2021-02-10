@@ -5,7 +5,6 @@ import GoToDetails from '../Buttons/GoToDetails'
 import { ContainerCard, ImageCard, ButtonContainer } from '../Card/styled'
 
 function Cards(props) {
-  
   return (
     <>
         {props.pokemon ? <ContainerCard key={props.pokemon.name}>
@@ -13,7 +12,7 @@ function Cards(props) {
           <ImageCard src={props.pokemon.sprites.front_default}/>
             <p>{props.pokemon.name}</p>
           <ButtonContainer>
-            <AddToPokedex />
+            <AddToPokedex pokemon={props.pokemon}/>
             <RemoveToPokedex />
             <GoToDetails pokemon={props.pokemon}/>
           </ButtonContainer>
