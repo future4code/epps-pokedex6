@@ -8,6 +8,7 @@ function AddToPokedex(props) {
 
   const addPokemonToPokedex = (poke) => {
     const index = states.pokeList.findIndex((pokemon) => pokemon.name === poke.name);
+    
     let newPokedex = [...states.pokedex];
       newPokedex.push( states.pokeList[index] )
     setters.setPokedex(newPokedex);
