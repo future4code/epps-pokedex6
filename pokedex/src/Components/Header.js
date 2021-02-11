@@ -3,7 +3,6 @@ import React, {useContext} from 'react'
 import GoToPokedex from './Buttons/GoToPokedex'
 import GoToHome from './Buttons/GoToHome'
 import GoBack from './Buttons/GoBack'
-import AddOrRemove from './Buttons/AddOrRemove'
 import GlobalStateContext from '../Global/Contexts/GlobalStateContext'
 
 const HeaderBox = styled.header`

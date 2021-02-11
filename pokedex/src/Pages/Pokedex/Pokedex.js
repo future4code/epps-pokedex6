@@ -18,8 +18,7 @@ console.log(states.pokedexData)
   return (
     <PokedexContainer>
 
-      {states.pokedexData && states.pokedexData.map((pokemon) => {
-        {console.log(pokemon)}
+      {states.pokedexData && states.pokedexData.length > 0 && states.pokedexData.map((pokemon) => {
         return(
           <Cards 
           pokemon={pokemon}

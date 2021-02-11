@@ -111,8 +111,11 @@ const pokedexImg = []
             )
             .then(res => {
                 pokedexImg.push(res.data)
-                console.log(res.data, pokedexImg.length)
+                console.log(pokedex.length, pokedexImg.length)
+                if (pokedexImg.length === pokedex.length){
                 setPokedexData(pokedexImg)
+                console.log(pokedexImg)
+                }
             })
             .catch(err => {
                 console.log(err)

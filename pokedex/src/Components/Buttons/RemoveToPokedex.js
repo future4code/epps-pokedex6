@@ -8,10 +8,12 @@ function RemoveToPokedex(props) {
 
   const removePokemonOfPokedex = (poke) => {
     const index = states.pokedex.findIndex((pokemon) => pokemon.name === poke.name)
-    let newList = [...states.pokedex]
-    newList.splice(states.pokedex[index], 1)
+    let newPokedex = [...states.pokedex]
+    newPokedex.splice(states.pokedex[index], 1)
     
-    setters.setPokeData(newList)
+    console.log(states.pokedex[index])
+    
+    setters.setPokedexData(newPokedex)
   }
 
   return (
