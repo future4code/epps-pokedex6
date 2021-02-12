@@ -1,4 +1,4 @@
-import react, {useContext} from 'react';
+import React, {useContext} from 'react';
 import { Button } from '../Buttons/styled'
 import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
@@ -8,12 +8,12 @@ function RemoveToPokedex(props) {
 
   const removePokemonOfPokedex = (poke) => {
     const index = states.pokedex.findIndex((pokemon) => pokemon.name === poke.name)
+
     let newPokedex = [...states.pokedex]
     newPokedex.splice(states.pokedex[index], 1)
-    
-    console.log(states.pokedex[index])
-    
-    setters.setPokedexData(newPokedex)
+  
+    setters.setPokedex(newPokedex)
+    setters.setPokedexData({})
   }
 
   return (

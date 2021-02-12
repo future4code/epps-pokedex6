@@ -8,22 +8,19 @@ const Router = () => {
 
     return(
     <BrowserRouter>
-      <Header/>
+        <Header/>
         <Switch>
             <Route exact path="/">
                 <Home/>
             </Route>
-
             <Route exact path="/pokedex">
                 <Pokedex/>
             </Route>
-
             <Route exact path="/details">
                 <Details/>
             </Route>
-
             <Route>
-               <div>error</div>
+                <div>error</div>
             </Route>
         </Switch>
     </BrowserRouter>

@@ -16,8 +16,6 @@ const GoToDetails = (props) => {
         const index = states.pokeList.findIndex((poke) => poke.name === pokemon.name);
 
         const pokemonToDetails = states.pokeList[index]
-        // pokemonToDetails é o que precisamos mandar la pro Details por meio de context
-        // console.log(pokemonToDetails)
         setters.setPokeDetails(pokemonToDetails)
     };
 
@@ -27,9 +25,7 @@ const GoToDetails = (props) => {
     }
 
     return (
-        // <PokeToDetails.Provider value={pokemonToDetails}>
         <Button onClick={() => detailsFunction(props.pokemon)}>Ver Detalhes</Button>
-        // </PokeToDetails.Provider>
     )
 }
 

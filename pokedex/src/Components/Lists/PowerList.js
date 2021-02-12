@@ -19,6 +19,10 @@ const List = styled.ul`
     margin-left: 0;
     margin-right: 0;
     padding-left: 20px;
+
+    h2 {
+      text-align: center;
+    }
 `
 const Item = styled.li ` 
     padding: 15px;
@@ -26,13 +30,12 @@ const Item = styled.li `
 
 function PowerList() {
     
-  const { states, setters, requests } = useContext(GlobalStateContext);
-
-console.log(states.pokeDataDetails)
+  const { states} = useContext(GlobalStateContext);
     return (
         <BoxList>
           <List>
-          {states.pokeDataDetails.stats.map((stats) => {
+            <h2>Poderes</h2>
+            {states.pokeDataDetails.stats.map((stats) => {
               return(
 
             <Item>{stats.stat.name}: {stats.base_stat}</Item>

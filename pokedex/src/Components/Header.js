@@ -6,16 +6,20 @@ import GoBack from './Buttons/GoBack'
 import GlobalStateContext from '../Global/Contexts/GlobalStateContext'
 
 const HeaderBox = styled.header`
+    display:flex;
+    justify-content: space-between;    
     background: #d53b47;
     width: 100vw;
     height: 10vh;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
 `
-const Title = styled.h1`
+const Title = styled.div`
+    display: flex;
+    justify-content: center;
+    flex: 1;
     color: white;
+    font-size: 25px;
+    font-weight: bold;
     
     @media(max-width: 800px){
     font-size: 1rem;
@@ -40,19 +44,22 @@ function Header() {
             <HeaderBox>
                 <GoToHome/>
                 <Title>Pokedex</Title>
+                
+             
             </HeaderBox>
         )
     } else if(states.page === "details") {
         return(
             <HeaderBox>
                 <GoBack/>
-                <Title>Nome do Pokemon</Title>
+                <Title>Pokemon</Title>
                 <GoToPokedex/>
             </HeaderBox>
         )
     } else {
         return (
-            <div></div>
+            <>
+            </>
         )
     }
 }

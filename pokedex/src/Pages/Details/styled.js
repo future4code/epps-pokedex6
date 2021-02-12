@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 100vw;
     height: 90vh;
     text-align: center;
-    
+
     @media(max-width: 800px){
     flex-direction: column;
     width: 100vw;
@@ -21,7 +21,6 @@ export const Box = styled.div `
     justify-content: center;
     width: 100%;
     text-align: center;
-
 
     @media(max-width: 800px){
     width: 98vw;
@@ -39,10 +38,19 @@ export const LeftCard = styled.div `
     height: 30%;
     margin: 50px;
     border-radius: 10%;
-    box-shadow: 10px 5px 5px #A9A9A9;
-    
+
+    img {
+        object-fit:cover;
+    }
+
+    @media(max-width: 1024px){
+    width: 50%;
+    height: 25%;
+    margin: 10%;
+    }
+
     @media(max-width: 800px){
-    width: 35%;
+    width: 25%;
     height: 10%;
     margin: 2%;
     }
@@ -54,11 +62,21 @@ export const MiddleCard = styled.div `
     background-color: #DDD;
     width: 80%;
     height: 75%;
-    padding: 10px;
+    padding: 5%;
     border-radius: 10%;
-    box-shadow: 10px 5px 5px #A9A9A9;
+
+    h1 {
+        padding: 10px;
+    }
+
+    @media(max-width: 1024px){
+    width:85%;
+    height: 65%;
+    margin: 2%;
+    }
     
     @media(max-width: 800px){
+    width:50%;
     height: 40%;
     margin: 2%;
     }
@@ -75,7 +93,11 @@ export const RightTopCard = styled.div `
     margin-bottom:10px;
     padding: 5px;
     border-radius: 15px;
-    box-shadow: 10px 6px 5px #A9A9A9;
+
+    @media(max-width: 1024px){
+    width: 40%;
+    margin: 10%;
+    }
 
     @media(max-width: 800px){
     margin: 2%;
@@ -87,8 +109,21 @@ export const RightCard = styled.div `
     background-color: #DDD;
     flex-direction: column;
     width: 80%;
-    height: auto;
+    height: 40%;
     padding: 10px;
-    border-radius: 10%;
-    box-shadow: 10px 6px 5px #A9A9A9;
+    border-radius: 20px;
+    align-items: center;
+
+    @media(max-width: 1024px){
+    width: 80%;
+    height: 20%;
+    margin: 5%;
+    border-radius: 20px;
+    align-items: center;
+    }
+
+    @media(max-width: 800px){
+    width: 50%;
+    margin: 2%;
+    }
 `

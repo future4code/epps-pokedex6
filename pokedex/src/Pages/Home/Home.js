@@ -1,7 +1,6 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useEffect, useContext} from 'react';
 import Cards from '../../Components/Card/Card';
 import { HomeContainer } from '../Home/styled';
-import axios from 'axios'
 import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
 
 function Home() {
@@ -12,16 +11,17 @@ function Home() {
     setters.setPage("home")
   }, [])
 
-   useEffect(() => {
+  useEffect(() => {
     requests.getPokeData()
   }, [states.pokeList])
 
   return (
     <HomeContainer>
-      {states.pokeData && states.pokeData.map((pokemon) => {
+      {states.pokeData.map((pokemon) => {
         return(
           <Cards 
           pokemon={pokemon}
+          id = {pokemon.id}
           key={pokemon.name}
           />
         )})}
