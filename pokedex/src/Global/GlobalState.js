@@ -76,6 +76,16 @@ const pokedexImg = []
             });
     }
 
+    
+  useEffect(() => {
+    requests.getPokemon()
+  }, [])
+
+  useEffect(() => {
+    requests.getPokeData()
+  }, [states.pokeList])
+
+
     const states = {pokeList, pokeData, pokedex, pokedexData, pokeDetails, pokeDataDetails, page}
     const setters = {setPokeList, setPokeData, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails, setPage}
     const requests = {getPokemon, getPokeData, getPokedexData, getPokeDataDetails}

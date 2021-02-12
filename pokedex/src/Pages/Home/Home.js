@@ -7,14 +7,9 @@ function Home() {
   const { states, setters, requests } = useContext(GlobalStateContext)
 
   useEffect(() => {
-    requests.getPokemon()
     setters.setPage("home")
   }, [])
-
-  useEffect(() => {
-    requests.getPokeData()
-  }, [states.pokeList])
-
+  
   return (
     <HomeContainer>
       {states.pokeData.map((pokemon) => {
