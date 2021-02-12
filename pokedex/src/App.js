@@ -10,7 +10,8 @@ const App = props => {
     <GlobalState>
       <Router/>
     </GlobalState>
-    );
+  
+  );
   }
 
 export default App;

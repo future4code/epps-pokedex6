@@ -3,21 +3,23 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Button = styled.button`
+    display: flex;
+    justify-content: center;
     color: white;
-    position: absolute;
-    right: 5vw;
     background: none;
     outline: none;
     padding: 1rem;
-    border: solid white 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid white ;
+    border-radius: 15px;
     cursor: pointer;
-
     &&:hover {
-    background: #d24953;
+    background: gold;
     }
 
     @media(max-width: 520px){
-    padding: 0;
+    padding: 3px;
     width: 22vw;
     }
 `
@@ -26,7 +28,7 @@ const GoToPokedex = () => {
     const history = useHistory()
 
     return (
-        <Button onClick={() => goToPokedex(history)}>Ver minha POKEDEX</Button>
+        <Button onClick={() => goToPokedex(history)}>POKEDEX</Button>
     )
 }
 

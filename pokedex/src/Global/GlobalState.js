@@ -3,14 +3,11 @@ import React,{useState} from 'react'
 import axios from 'axios' 
 
 const GlobalState = (props) => {
-const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
+
+  const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
     
   const [pokeList, setPokeList] = useState([]);
   const [pokeData, setPokeData] = useState ([]);
-  const [pokeName, setPokeName] = useState("");
-  const [pokeUrl, setPokeUrl] = useState([]);
-  const [pokeId, setPokeId] = useState([]);
-  const [pokeColor, setPokeColor] = useState([]);
   const [pokedex, setPokedex] = useState([]);
   const [pokedexData, setPokedexData] = useState();
   const [pokeDetails, setPokeDetails] = useState();
@@ -19,8 +16,6 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon/?limit=20";
 
 const pokeImg = []
 const pokedexImg = []
-
-// Pega a lista de pokemons inteira
 
   const getPokemon = () => { 
     axios
@@ -33,60 +28,7 @@ const pokedexImg = []
       });
   };
 
-
-// pega o nome do pokemon com a url
-  
-  const getPokeUrl =() => {
-        pokeList.map((pokemon) => {
-        axios
-          .get(
-            `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-          )
-          .then(res => {
-              setPokeName(pokemon.name)
-              setPokeUrl(pokemon.url)
-          })
-          .catch(err => {
-            console.log(err)
-          });
-        })
-    }
-
-// pega a id
-    
-  const getPokeId = () => {
-    pokeList.map((pokemon) => {
-      axios
-          .get(
-            `${pokemon.url}`
-          )
-          .then(res => {
-              setPokeId(res.data.id)
-          })
-          .catch(err => {
-            console.log(err)
-          });
-    })
-  }
-
-
-// pega a cor
-
-  const getPokeColor = () => {
-      axios
-          .get(
-            `https://pokeapi.co/api/v2/pokemon-color/${pokeId}`
-          )
-          .then(res => {
-              setPokeColor(res.data.results)
-              console.log(res.data.results)
-          })
-          .catch(err => {
-            console.log(err)
-          });
-    }   
-
-    const getPokeData = () => {
+  const getPokeData = () => {
     pokeList.map((pokemon) => {
         axios
             .get(
@@ -111,10 +53,8 @@ const pokedexImg = []
             )
             .then(res => {
                 pokedexImg.push(res.data)
-                console.log(pokedex.length, pokedexImg.length)
                 if (pokedexImg.length === pokedex.length){
                 setPokedexData(pokedexImg)
-                console.log(pokedexImg)
                 }
             })
             .catch(err => {
@@ -122,9 +62,7 @@ const pokedexImg = []
             });
         })
     }
-    
-// pega detalhes
-  
+
     const getPokeDataDetails = () => {
         axios
             .get(
@@ -138,9 +76,9 @@ const pokedexImg = []
             });
     }
 
-    const states = {pokeList, pokeData, pokeName, pokeUrl, pokeId, pokeColor, pokedex, pokedexData, pokeDetails, pokeDataDetails, page}
-    const setters = {setPokeList, setPokeData, setPokeName, setPokeUrl, setPokeId, setPokeColor, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails, setPage}
-    const requests = {getPokemon, getPokeData, getPokeUrl, getPokeId, getPokeColor, getPokedexData, getPokeDataDetails}
+    const states = {pokeList, pokeData, pokedex, pokedexData, pokeDetails, pokeDataDetails, page}
+    const setters = {setPokeList, setPokeData, setPokedex, setPokedexData, setPokeDetails, setPokeDataDetails, setPage}
+    const requests = {getPokemon, getPokeData, getPokedexData, getPokeDataDetails}
 
     const data = { states, setters, requests };
 

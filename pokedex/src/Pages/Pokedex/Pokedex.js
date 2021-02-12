@@ -10,11 +10,10 @@ function Pokedex() {
     setters.setPage("pokedex")
   },[])
 
-   useEffect(() => {
+  useEffect(() => {
     requests.getPokedexData()
   }, [states.pokedex])
 
-console.log(states.pokedexData)
   return (
     <PokedexContainer>
 
@@ -25,7 +24,6 @@ console.log(states.pokedexData)
           key={pokemon.name}
           />
         )})}
-        
     </PokedexContainer>
   )
 }

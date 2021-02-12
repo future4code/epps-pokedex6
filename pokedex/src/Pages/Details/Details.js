@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext} from 'react';
 import MainPowerList from '../../Components/Lists/MainPowerList';
 import PowerList from '../../Components/Lists/PowerList';
-import  {Box, Container, LeftCard, MiddleCard, RightTopCard, RightCard} from './styled'
+import  {Box, Container, LeftCard, MiddleCard, RightTopCard, RightCard, Title} from './styled'
 import Card from '../../Components/Card/Card'
 import axios from 'axios'
 import GlobalStateContext from '../../Global/Contexts/GlobalStateContext'
@@ -15,15 +15,12 @@ function Details() {
   },[])
 
   useEffect(() => {
-   states.pokeDetails && requests.getPokeDataDetails()
+    states.pokeDetails && requests.getPokeDataDetails()
   }, [states.pokeDetails])
-
-  console.log(states.pokeDataDetails)
 
 if(states.pokeDataDetails) {
       return (
         <Container>
-        <h1>{states.pokeDataDetails.name}</h1>
           <Box>
             <LeftCard>
               <img src={states.pokeDataDetails.sprites.front_default} alt={states.pokeDataDetails.name}/>              
@@ -34,7 +31,8 @@ if(states.pokeDataDetails) {
           </Box>
           <Box>
             <MiddleCard>
-              <h2>Poderes</h2>
+              <h1>{`${states.pokeDataDetails.name}`.toUpperCase()}</h1>
+              <hr/>
               <PowerList/>
             </MiddleCard>
           </Box>
@@ -57,7 +55,7 @@ if(states.pokeDataDetails) {
 } else {
   return(
 // Aqui pode ter um loading personalizado
-  <div>Carregando...</div>
+  <div>Escolha um Pokemon na lista de Pokemons</div>
   )
 }
   
